@@ -48,7 +48,48 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
+  router: {
+    trailingSlash: true
+  },
+
+  generate: {
+    fallback: false,
+    crawler: false
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, { isClient, isDev }) {
+      // Extend only webpack config for client-bundle
+      if (isDev && isClient) {
+        config.devtool = 'source-map'
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    },
+    extractCSS: true,
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
+    },
+    // Combine media query
+    postcss: {
+      plugins: {
+        'postcss-combine-media-query': {}
+      }
+    }
   }
 }

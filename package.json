@@ -14,7 +14,8 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.4",
@@ -25,8 +26,10 @@
     "@nuxtjs/stylelint-module": "^4.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.7.0",
+    "postcss-combine-media-query": "^1.0.1",
     "sass": "^1.32.4",
     "sass-loader": "^10.1.1",
     "stylelint": "^13.12.0",
