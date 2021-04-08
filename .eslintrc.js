@@ -20,6 +20,7 @@ module.exports = {
     'require-jsdoc': 'off',
     'no-irregular-whitespace': 'off',
     'no-invalid-this': 'off',
-    'object-curly-spacing': ['error', 'always']
+    'object-curly-spacing': ['error', 'always'],
+    'no-undef': 'off'
   }
 }

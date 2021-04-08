@@ -1,3 +1,5 @@
+import router from './router'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -24,6 +26,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // '~plugins/vue-scrollto'
+    '~/plugins/myplugin'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -42,8 +46,16 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // https://content.nuxtjs.org/
+    '@nuxt/content'
   ],
+
+  content: {
+    liveEdit: false,
+    // Only search in title and description
+    fullTextSearchFields: ['title', 'description']
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
@@ -54,7 +66,14 @@ export default {
 
   generate: {
     fallback: false,
-    crawler: false
+    crawler: false,
+    async routes () {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('news/detail').only(['slug']).fetch()
+      if (files.length === 0) { return [] }
+
+      return files.map(news => router.newsDetailPage(parseInt(news.slug)))
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
