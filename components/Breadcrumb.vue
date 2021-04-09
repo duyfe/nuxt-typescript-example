@@ -10,11 +10,7 @@
 
 <script lang='ts'>
 import Vue, { PropOptions } from 'vue'
-
-interface BreadcrumbItem {
-  label: string,
-  link: string
-}
+import { BreadcrumbItem } from '@/common/interface'
 
 export default Vue.extend({
   name: 'Breadcrumb',

@@ -1,11 +1,13 @@
 <template>
   <div class="page news">
+    <Breadcrumb :b-items="bItems" />
     {{ news }}
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { BreadcrumbItem } from '@/common/interface'
 
 export default Vue.extend({
   name: 'News',
@@ -23,6 +25,18 @@ export default Vue.extend({
     return {
       news: []
     }
+  },
+  computed: {
+    bItems () : BreadcrumbItem[] {
+      return [
+        { label: 'Home', link: '/' },
+        // @ts-ignore
+        { label: 'News', link: (this as any).$link.newsPage() as string }
+      ]
+    }
+  },
+  mounted () {
+    console.log((this as any).$link)
   }
 })
 </script>
