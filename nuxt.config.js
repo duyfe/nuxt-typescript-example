@@ -25,8 +25,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // '~plugins/vue-scrollto'
-    // '~/plugins/myplugin'
+    '~plugins/vue-scrollto'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -47,7 +46,9 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://content.nuxtjs.org/
-    '@nuxt/content'
+    '@nuxt/content',
+    // https://www.npmjs.com/package/vue-scrollto
+    'vue-scrollto/nuxt'
   ],
 
   content: {

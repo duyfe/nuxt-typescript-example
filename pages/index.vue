@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div>
+    <div class="space">
       <Logo />
-      <h1 class="title">
+      <h1 v-scroll-to="{el: '#scrollToMe'}" class="title">
         nuxt-ts
       </h1>
       <div class="links">
@@ -24,6 +24,7 @@
         </a>
       </div>
     </div>
+    <div id="scrollToMe" />
   </div>
 </template>
 
@@ -33,7 +34,7 @@ import Vue from 'vue'
 export default Vue.extend({})
 </script>
 
-<style>
+<style lang="scss" scroped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -41,6 +42,11 @@ export default Vue.extend({})
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.space {
+  height: 200vh;
+  width: 100%;
 }
 
 .title {
