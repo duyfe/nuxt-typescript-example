@@ -14,6 +14,7 @@ export default Vue.extend({
       .only(['slug', 'title'])
       .fetch()
       .catch((err: Error) => {
+        // eslint-disable-next-line no-console
         console.log(err)
       })
     return { news }
@@ -22,9 +23,6 @@ export default Vue.extend({
     return {
       news: []
     }
-  },
-  mounted () {
-
   }
 })
 </script>

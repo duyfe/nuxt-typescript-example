@@ -14,6 +14,7 @@ export default Vue.extend({
     const news = await $content(`news/detail/${id}`)
       .fetch()
       .catch((err: Error) => {
+        // eslint-disable-next-line no-console
         console.log(err)
       })
     return { news }

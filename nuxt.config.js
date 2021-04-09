@@ -3,7 +3,6 @@ import router from './router'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-ts',
@@ -27,7 +26,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // '~plugins/vue-scrollto'
-    '~/plugins/myplugin'
+    // '~/plugins/myplugin'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -80,8 +79,10 @@ export default {
   build: {
     extend (config, { isClient, isDev }) {
       // Extend only webpack config for client-bundle
+      config.devtool = isClient ? 'source-map' : ''
+
       if (isDev && isClient) {
-        config.devtool = 'source-map'
+        // Run eslint on save
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

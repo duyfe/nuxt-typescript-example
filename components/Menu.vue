@@ -17,7 +17,8 @@ export default Vue.extend({
     return {
       menuItems: [
         { label: 'Top', link: '/' },
-        { label: 'About', link: '/about/' }
+        { label: 'About', link: '/about/' },
+        { label: 'News', link: '/news/' }
       ]
     }
   }

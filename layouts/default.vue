@@ -4,15 +4,6 @@
     <Nuxt />
   </div>
 </template>
-<script lang="ts">
-import Vue from 'vue'
-import Menu from '@/components/Menu.vue'
-export default Vue.extend({
-  components: {
-    Menu
-  }
-})
-</script>
 <style>
 html {
   font-family:
