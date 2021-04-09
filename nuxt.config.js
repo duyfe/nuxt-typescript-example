@@ -1,4 +1,4 @@
-import router from './router'
+import router from './router-link'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -16,7 +16,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js' }
+    ],
+    __dangerouslyDisableSanitizers: ['script', 'noscript']
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -25,7 +29,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~plugins/vue-scrollto'
+    '~plugins/vue-scrollto',
+    '~plugins/router-link'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

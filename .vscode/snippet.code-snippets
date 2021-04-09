@@ -6,5 +6,35 @@
       "console.log($1)"
     ],
     "description": "Log output to console"
+  },
+  "Quick nuxt typescript template": {
+    "scope": "javascript,typescript,html,vue",
+    "prefix": ["nuxtts", "nuxt-ts", "nut"],
+    "body": [
+      "<template>",
+        "\t<div class='$1'>",
+        "\t\t$2",
+        "\t</div>",
+      "</template>",
+      "",
+      "<script lang='ts'>",
+      "import Vue from 'vue'",
+      "",
+      "export default Vue.extend({",
+        "\tname: '$TM_FILENAME_BASE'",
+      "})",
+      "</script>",
+      "",
+      "<style lang='scss' scoped>",
+      "/*",
+      "| --SCOPED--",
+      "| // $RELATIVE_FILEPATH",
+      "| ------------------------",
+      "*/",
+      "",
+      "</style>",
+      ""
+    ],
+    "description": "Init nuxt typescript template"
   }
 }
