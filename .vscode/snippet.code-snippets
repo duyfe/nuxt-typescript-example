@@ -9,7 +9,7 @@
   },
   "Quick nuxt typescript template": {
     "scope": "javascript,typescript,html,vue",
-    "prefix": ["nuxtts", "nuxt-ts", "nut"],
+    "prefix": ["vnut"],
     "body": [
       "<template>",
         "\t<div class='$1'>",
