@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { BreadcrumbItem } from '@/common/interface'
+import { BreadcrumbItem } from '@common/interface'
 
 export default Vue.extend({
   name: 'News',

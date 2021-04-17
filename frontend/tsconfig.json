@@ -15,6 +15,7 @@
     "noEmit": true,
     "skipLibCheck": true,
     "experimentalDecorators": true,
+    "declaration": true,
     "baseUrl": ".",
     "paths": {
       "~/*": [
@@ -22,6 +23,12 @@
       ],
       "@/*": [
         "./*"
+      ],
+      "@components/*": [
+        "./components/*"
+      ],
+      "@common/*": [
+        "./common/*"
       ]
     },
     "types": [
@@ -35,5 +42,9 @@
     "node_modules",
     ".nuxt",
     "dist"
-  ]
+  ],
+  "importHelpers": true,
+  "typeRoots": [
+    "node_modules/@types"
+  ],
 }
