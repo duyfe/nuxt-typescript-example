@@ -29,22 +29,22 @@
       ],
       "@common/*": [
         "./common/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
       ]
     },
     "types": [
       "@nuxt/types",
       "@nuxtjs/axios",
       "@types/node",
-      "@nuxt/content"
+      "@nuxt/content",
+      "types"
     ]
   },
   "exclude": [
     "node_modules",
     ".nuxt",
     "dist"
-  ],
-  "importHelpers": true,
-  "typeRoots": [
-    "node_modules/@types"
-  ],
+  ]
 }
