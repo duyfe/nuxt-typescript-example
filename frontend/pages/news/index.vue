@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { BreadcrumbItem } from '@common/interface'
+import { BreadcrumbItem } from '@/common/interface'
 
 export default Vue.extend({
   name: 'News',
@@ -31,7 +31,7 @@ export default Vue.extend({
       return [
         { label: 'Home', link: '/' },
         // @ts-ignore
-        { label: 'News', link: (this as any).$link.newsPage() as string }
+        { label: 'News', link: this.$link.newsPage() }
       ]
     }
   },

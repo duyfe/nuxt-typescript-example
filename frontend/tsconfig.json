@@ -23,15 +23,6 @@
       ],
       "@/*": [
         "./*"
-      ],
-      "@components/*": [
-        "./components/*"
-      ],
-      "@common/*": [
-        "./common/*"
-      ],
-      "@assets/*": [
-        "./assets/*"
       ]
     },
     "types": [

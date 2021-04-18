@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Breadcrumb from '@components/Breadcrumb'
+import Breadcrumb from '@/components/Breadcrumb.vue'
 
 export default Vue.extend({
   name: 'NewsDetail',
