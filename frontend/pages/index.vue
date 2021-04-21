@@ -1,53 +1,47 @@
 <template>
   <div class="container">
-    <div class="space">
-      <Logo />
-      <h1 v-scroll-to="{el: '#scrollToMe'}" class="title">
-        nuxt-ts
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-    <div id="scrollToMe" />
+    <div id="keyVisualCanvas" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  mounted () {
+    import('~/assets/animation/index').then((module) => {
+      const KeyVisual = module.default
+
+      const elWrapper = document.getElementById('keyVisualCanvas')
+      if (elWrapper) {
+        const app = new KeyVisual({
+          width: window.innerWidth,
+          height: 600,
+          resource: {
+            spineBoy: '/data/spine_boy-pro.json',
+            buggy: '/images/buggy.png'
+          }
+        })
+        app.init(elWrapper)
+      }
+    })
+  }
+})
 </script>
 
 <style lang="scss" scroped>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
-.space {
-  height: 200vh;
-  width: 100%;
-}
+//
+//.space {
+//  height: 200vh;
+//  width: 100%;
+//}
 
 .title {
   font-family:

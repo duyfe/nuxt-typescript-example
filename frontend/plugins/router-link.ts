@@ -7,4 +7,5 @@ const routerPlugin = (context: Context, inject: Function) => {
   inject('link', routerLink)
 }
 
+export type RouterLink = typeof routerLink
 export default routerPlugin

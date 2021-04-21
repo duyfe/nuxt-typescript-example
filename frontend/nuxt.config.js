@@ -18,7 +18,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js' }
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js' },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js' },
+      { src: '/data/spine-boy/pixi-spine.js' }
     ],
     __dangerouslyDisableSanitizers: ['script', 'noscript']
   },

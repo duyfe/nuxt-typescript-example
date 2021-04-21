@@ -16,6 +16,8 @@
     "@nuxtjs/axios": "^5.13.1",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
+    "pixi-spine": "^2.1.14",
+    "pixi.js": "^5.3.9",
     "vue": "^2.6.12",
     "vue-scrollto": "^2.20.0"
   },

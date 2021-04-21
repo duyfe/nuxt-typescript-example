@@ -34,9 +34,6 @@ export default Vue.extend({
         { label: 'News', link: this.$link.newsPage() }
       ]
     }
-  },
-  mounted () {
-    console.log((this as any).$link)
   }
 })
 </script>

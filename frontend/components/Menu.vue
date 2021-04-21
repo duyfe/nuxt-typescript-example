@@ -21,9 +21,6 @@ export default Vue.extend({
         { label: 'News', link: '/news/' }
       ]
     }
-  },
-  mounted () {
-    console.log(this.$link)
   }
 })
 </script>
