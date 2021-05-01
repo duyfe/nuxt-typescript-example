@@ -7,13 +7,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Breadcrumb from '@/components/Breadcrumb.vue'
 
 export default Vue.extend({
   name: 'NewsDetail',
-  components: {
-    Breadcrumb
-  },
   async asyncData ({ params, app }) {
     const id: number = parseInt(params.id) || 0
     const news = await app.$content(`news/detail/${id}`)
